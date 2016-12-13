@@ -1,0 +1,13 @@
+{
+    "name": "froiden/sql_generator",
+    "description": "convert Laravel migrations to raw SQL scripts",
+    "authors": [
+        {
+            "name": "Jayant Soni",
+            "email": "j.janu.inos@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": ">=5.3.*"
+    }
+}

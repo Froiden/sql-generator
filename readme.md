@@ -14,14 +14,14 @@ composer require froiden/sql_generator --dev
 Now add the following to the providers array in your config/app.php
 
 ```php
-    \Froiden\SqlGenerator\Providers\SqlGeneratorServiceProvider::class,
+\Froiden\SqlGenerator\Providers\SqlGeneratorServiceProvider::class,
 ```
 
 ### Step 3: Run command
-    Then you will need to run these commands in the terminal
+Then you will need to run these commands in the terminal
 
 ```bash
-    php artisan sql:generate
+php artisan sql:generate
 ```
 
 This Will Generate "database.sql" in database/sql directory

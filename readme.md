@@ -1,5 +1,5 @@
 # LARAVEL SQL GENERATOR
-    Convert Laravel migrations to raw SQL scripts
+Convert Laravel migrations to raw SQL scripts
 
 
 ## Usage

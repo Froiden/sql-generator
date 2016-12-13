@@ -7,7 +7,7 @@ Convert Laravel migrations to raw SQL scripts
 ### Step 1: Install Through Composer
 
 ```
-composer require froiden/sql_generator --dev
+composer require "froiden/sql-generator:dev-master"
 ```
 
 ### Step 2: Add the Service Provider

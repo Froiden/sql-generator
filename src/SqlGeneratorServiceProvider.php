@@ -1,6 +1,6 @@
 <?php
 
-namespace Froiden\SqlGenerator\Providers;
+namespace Froiden\SqlGenerator;
 
 use Froiden\SqlGenerator\Console\SqlCommand;
 use Illuminate\Support\ServiceProvider;

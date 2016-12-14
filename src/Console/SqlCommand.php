@@ -26,6 +26,7 @@ class SqlCommand extends Command {
         // queries against the database returning the array of raw SQL statements
         // that would get fired against the database system for this migration.
         $db = $migrator->resolveConnection(null);
+
         $migrations = $migrator->getMigrationFiles(base_path().'/database/migrations');
 
         //
@@ -55,7 +56,7 @@ class SqlCommand extends Command {
             }
         }
 
-        $dir = database_path('sql');
+        $dir =  Config::get('sql_generator.defaultDirectory');
         //Check directory exit or not
         if( is_dir($dir) === false )
         {

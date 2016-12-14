@@ -1,0 +1,16 @@
+language: php
+
+php:
+  - 5.6
+  - 7.0
+
+sudo: false
+
+cache:
+  directories:
+    - laravel
+
+services: mysql
+
+script:
+  - vendor/bin/phpunit

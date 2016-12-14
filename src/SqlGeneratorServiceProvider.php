@@ -15,6 +15,9 @@ class SqlGeneratorServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        $this->publishes([
+            __DIR__.'/sql_generator.php' => config_path("sql_generator.php"),
+        ]);
     }
 
     /**

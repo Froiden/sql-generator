@@ -9,7 +9,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "Froiden\\SqlGenerator\\": "src"
+            "Froiden\\SqlGenerator\\": "src",
+            "Froiden\\SqlGenerator\\Tests\\": "tests"
         }
     },
     "require": {

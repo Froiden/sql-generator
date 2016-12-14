@@ -24,4 +24,5 @@ Then you will need to run these commands in the terminal
 php artisan sql:generate
 ```
 
-This Will Generate "database.sql" in database/sql directory
+This Will Generate "database.sql" in 'database/sql' directory
+If you want change path directory go to 'config/sql_generator.php' change value 'defaultDirectory'

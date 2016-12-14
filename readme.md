@@ -14,7 +14,7 @@ composer require "froiden/sql-generator:dev-master"
 Now add the following to the providers array in your config/app.php
 
 ```php
-\Froiden\SqlGenerator\Providers\SqlGeneratorServiceProvider::class,
+\Froiden\SqlGenerator\SqlGeneratorServiceProvider::class,
 ```
 
 ### Step 3: Run command

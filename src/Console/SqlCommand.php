@@ -1,6 +1,5 @@
 <?php
 namespace Froiden\SqlGenerator\Console;
-
 use Froiden\SqlGenerator\SqlFormatter;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Config;
@@ -8,16 +7,12 @@ use Illuminate\Support\Facades\File;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 class SqlCommand extends Command {
-
     protected $name = 'sql:generate';
     protected $description = 'convert Laravel migrations to raw SQL scripts';
-
-
     public function __construct()
     {
         parent::__construct();
     }
-
     public function handle()
     {
         // Create object of migration
@@ -26,16 +21,13 @@ class SqlCommand extends Command {
         // queries against the database returning the array of raw SQL statements
         // that would get fired against the database system for this migration.
         $db = $migrator->resolveConnection(null);
-
         $migrations = $migrator->getMigrationFiles(base_path().'/database/migrations');
-
         //
         $sql = "-- convert Laravel migrations to raw SQL scripts --\n";
-
         foreach($migrations as $migration) {
-        // First we will resolve a "real" instance of the migration class from this
-        // migration file name. Once we have the instances we can run the actual
-        // command such as "up" or "down", or we can just simulate the action.
+            // First we will resolve a "real" instance of the migration class from this
+            // migration file name. Once we have the instances we can run the actual
+            // command such as "up" or "down", or we can just simulate the action.
             $migration_name = $migrator->getMigrationName($migration);
             $migration = $migrator->resolve($migration_name);
             $name = "";
@@ -51,11 +43,9 @@ class SqlCommand extends Command {
                     }
                 }
                 $query['query'] = SqlFormatter::format($query['query'],false);
-
                 $sql .= $query['query'].";\n";
             }
         }
-
         $dir =  Config::get('sql_generator.defaultDirectory');
         //Check directory exit or not
         if( is_dir($dir) === false )
@@ -63,10 +53,8 @@ class SqlCommand extends Command {
             // Make directory in database folder
             mkdir($dir);
         }
-
         // Pull query in sql file
         File::put($dir.'/database.sql', $sql);
         $this->comment("Sql script create successfully");
     }
-
 }

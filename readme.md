@@ -1,3 +1,7 @@
+[![Packagist License](https://poser.pugx.org/froiden/sql-generator/license.png)]()
+[![Total Downloads](https://poser.pugx.org/froiden/sql-generator/d/total.png)](https://packagist.org/packages/froiden/sql-generator)
+
+
 # LARAVEL SQL GENERATOR
 Convert Laravel migrations to raw SQL scripts
 

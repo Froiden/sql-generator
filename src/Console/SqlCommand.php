@@ -21,7 +21,7 @@ class SqlCommand extends Command {
         // queries against the database returning the array of raw SQL statements
         // that would get fired against the database system for this migration.
         $db = $migrator->resolveConnection(null);
-        $migrations = $migrator->getMigrationFiles(base_path().'/database/migrations');
+        $migrator->requireFiles($migrations = $migrator->getMigrationFiles(base_path().'/database/migrations'));
         //
         $sql = "-- convert Laravel migrations to raw SQL scripts --\n";
         foreach($migrations as $migration) {
